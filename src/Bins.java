@@ -22,7 +22,13 @@ public class Bins {
     public List<Integer> readData (Scanner input) {
         List<Integer> results = new ArrayList<Integer>();
         while (input.hasNext()) {
-            results.add(input.nextInt());
+        	if (input.hasNextInt()) {
+                results.add(input.nextInt());
+        	}
+        	else {
+        		break;
+        	}
+
         }
         return results;
     }
